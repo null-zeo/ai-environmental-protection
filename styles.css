@@ -1,0 +1,244 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    min-height: 100vh;
+    color: #333;
+}
+
+.container {
+    max-width: 1400px;
+    margin: 0 auto;
+    padding: 20px;
+}
+
+header {
+    background: white;
+    padding: 40px 20px;
+    border-radius: 10px;
+    margin-bottom: 30px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    text-align: center;
+}
+
+header h1 {
+    color: #667eea;
+    margin-bottom: 10px;
+    font-size: 2.5em;
+}
+
+header p {
+    color: #666;
+    font-size: 1.1em;
+    line-height: 1.6;
+}
+
+main {
+    background: white;
+    border-radius: 10px;
+    overflow: hidden;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+/* Flowchart Section */
+.flowchart-section {
+    padding: 40px 20px;
+    background: linear-gradient(to bottom, #f8f9fa, #ffffff);
+    border-bottom: 2px solid #eee;
+}
+
+.flowchart-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 20px;
+    min-height: 500px;
+    position: relative;
+}
+
+.node {
+    background: white;
+    border: 3px solid #ddd;
+    border-radius: 8px;
+    padding: 15px 20px;
+    min-width: 180px;
+    text-align: center;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+    position: relative;
+    flex-basis: calc(20% - 20px);
+}
+
+.node:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+}
+
+.node.active {
+    border-width: 4px;
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.3);
+    transform: scale(1.05);
+}
+
+.node-label {
+    font-weight: bold;
+    font-size: 1em;
+    margin-bottom: 8px;
+    color: #333;
+}
+
+.node-description {
+    font-size: 0.85em;
+    color: #666;
+    line-height: 1.4;
+    display: none;
+}
+
+.node.active .node-description {
+    display: block;
+}
+
+/* Legend Section */
+.legend-section {
+    padding: 30px 20px;
+    background: #f8f9fa;
+    border-bottom: 2px solid #eee;
+}
+
+.legend-section h2 {
+    color: #333;
+    margin-bottom: 20px;
+    text-align: center;
+}
+
+.legend-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 15px;
+}
+
+.legend-item {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    padding: 10px;
+    background: white;
+    border-radius: 6px;
+    border: 1px solid #ddd;
+}
+
+.color-box {
+    width: 30px;
+    height: 30px;
+    border-radius: 4px;
+    flex-shrink: 0;
+}
+
+.legend-item span {
+    color: #333;
+    font-size: 0.95em;
+}
+
+/* Info Section */
+.info-section {
+    padding: 30px 20px;
+    background: #ffffff;
+}
+
+.node-details {
+    background: #f0f4ff;
+    border-left: 4px solid #667eea;
+    padding: 20px;
+    border-radius: 6px;
+    line-height: 1.8;
+    color: #333;
+}
+
+.node-details h3 {
+    color: #667eea;
+    margin-bottom: 10px;
+    font-size: 1.3em;
+}
+
+.node-details p {
+    margin: 8px 0;
+}
+
+.node-details ul {
+    margin-left: 20px;
+    margin-top: 10px;
+}
+
+.node-details li {
+    margin: 5px 0;
+}
+
+/* Footer */
+footer {
+    background: rgba(0, 0, 0, 0.8);
+    color: white;
+    text-align: center;
+    padding: 20px;
+    margin-top: 30px;
+    border-radius: 10px;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    header h1 {
+        font-size: 1.8em;
+    }
+
+    header p {
+        font-size: 0.95em;
+    }
+
+    .node {
+        flex-basis: calc(50% - 20px);
+        min-width: 150px;
+        padding: 12px 15px;
+    }
+
+    .legend-grid {
+        grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+    }
+
+    .flowchart-section,
+    .legend-section,
+    .info-section {
+        padding: 20px 15px;
+    }
+}
+
+@media (max-width: 480px) {
+    .container {
+        padding: 10px;
+    }
+
+    header {
+        padding: 20px 10px;
+    }
+
+    header h1 {
+        font-size: 1.3em;
+    }
+
+    header p {
+        font-size: 0.85em;
+    }
+
+    .node {
+        flex-basis: 100%;
+        min-width: auto;
+    }
+
+    .legend-grid {
+        grid-template-columns: 1fr;
+    }
+}
