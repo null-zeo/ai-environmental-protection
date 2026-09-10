@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>IA para Proteção do Meio Ambiente</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/vis/4.21.0/vis.min.js"></script>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/vis/4.21.0/vis.min.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>🌍 IA para Proteção do Meio Ambiente</h1>
+            <p class="subtitle">Como a Inteligência Artificial ajuda a proteger nosso planeta</p>
+        </header>
+
+        <div class="content">
+            <div class="description">
+                <h2>Fluxograma Interativo</h2>
+                <p>Explore como a Inteligência Artificial está transformando a forma como protegemos o meio ambiente. Clique nos nós para mais informações.</p>
+            </div>
+
+            <div id="network" class="network-container"></div>
+            
+            <div id="info-panel" class="info-panel">
+                <h3 id="info-title">Selecione um nó no fluxograma</h3>
+                <p id="info-description">Clique em qualquer elemento do diagrama para ver mais detalhes</p>
+            </div>
+        </div>
+
+        <section class="applications">
+            <h2>Aplicações Práticas</h2>
+            <div class="app-grid">
+                <div class="app-card">
+                    <h3>🛰️ Monitoramento Ambiental</h3>
+                    <p>Satélites com IA analisam dados em tempo real para monitorar florestas, oceanos e atmosfera.</p>
+                </div>
+                <div class="app-card">
+                    <h3>🌳 Detecção de Desmatamento</h3>
+                    <p>Algoritmos identificam automaticamente áreas de desflorestação ilegal e alertam autoridades.</p>
+                </div>
+                <div class="app-card">
+                    <h3>🌡️ Previsão Climática</h3>
+                    <p>Modelos de ML preveem mudanças climáticas com maior precisão para planejamento futuro.</p>
+                </div>
+                <div class="app-card">
+                    <h3>🐘 Conservação de Biodiversidade</h3>
+                    <p>IA rastreia espécies em extinção e monitora habitats ameaçados.</p>
+                </div>
+                <div class="app-card">
+                    <h3>⚡ Otimização de Energia</h3>
+                    <p>Sistemas inteligentes otimizam painéis solares e redes elétricas para eficiência máxima.</p>
+                </div>
+                <div class="app-card">
+                    <h3>💧 Gestão de Água</h3>
+                    <p>IA detecta vazamentos e otimiza o uso de recursos hídricos em cidades e agricultura.</p>
+                </div>
+            </div>
+        </section>
+
+        <footer>
+            <p>&copy; 2024 IA para Meio Ambiente. Criado com 💚 para um planeta melhor.</p>
+        </footer>
+    </div>
+
+    <script src="{{ url_for('static', filename='flowchart.js') }}"></script>
+</body>
+</html>

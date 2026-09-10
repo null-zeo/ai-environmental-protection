@@ -12,89 +12,82 @@ def get_flowchart():
     flowchart_data = {
         "nodes": [
             {
-                "id": "start",
-                "label": "Environmental Challenges",
-                "description": "Climate change, biodiversity loss, pollution, resource depletion",
-                "color": "#ff6b6b"
+                "id": 1,
+                "label": "Inteligência Artificial",
+                "description": "Tecnologias de IA e Machine Learning",
+                "color": "#4CAF50"
             },
             {
-                "id": "ai_applications",
-                "label": "AI Applications",
-                "description": "Machine learning, deep learning, predictive modeling",
-                "color": "#4ecdc4"
+                "id": 2,
+                "label": "Monitoramento Ambiental",
+                "description": "Satélites, sensores, análise de dados em tempo real",
+                "color": "#2196F3"
             },
             {
-                "id": "monitoring",
-                "label": "Climate & Environmental Monitoring",
-                "description": "Satellite imagery analysis, weather prediction, air/water quality tracking",
-                "color": "#45b7d1"
+                "id": 3,
+                "label": "Detecção de Desmatamento",
+                "description": "Identificar áreas de desflorestação automaticamente",
+                "color": "#FF9800"
             },
             {
-                "id": "conservation",
-                "label": "Wildlife Conservation",
-                "description": "Animal tracking, poaching prevention, habitat mapping, species identification",
-                "color": "#96ceb4"
+                "id": 4,
+                "label": "Previsão de Mudanças Climáticas",
+                "description": "Modelos preditivos de clima e padrões atmosféricos",
+                "color": "#FF9800"
             },
             {
-                "id": "agriculture",
-                "label": "Smart Agriculture",
-                "description": "Crop optimization, pest detection, resource efficiency, yield prediction",
-                "color": "#ffeaa7"
+                "id": 5,
+                "label": "Conservação de Biodiversidade",
+                "description": "Rastreamento de espécies e habitats ameaçados",
+                "color": "#FF9800"
             },
             {
-                "id": "energy",
-                "label": "Renewable Energy Optimization",
-                "description": "Solar/wind forecasting, grid management, energy efficiency",
-                "color": "#dfe6e9"
+                "id": 6,
+                "label": "Otimização de Energia",
+                "description": "Eficiência em painéis solares e redes elétricas inteligentes",
+                "color": "#FFC107"
             },
             {
-                "id": "pollution",
-                "label": "Pollution Control",
-                "description": "Emission monitoring, waste management, water treatment optimization",
-                "color": "#a29bfe"
+                "id": 7,
+                "label": "Gestão de Recursos Hídricos",
+                "description": "Detectar vazamentos e otimizar uso de água",
+                "color": "#03A9F4"
             },
             {
-                "id": "forest",
-                "label": "Forest Management",
-                "description": "Deforestation detection, fire prediction, reforestation planning",
-                "color": "#55efc4"
+                "id": 8,
+                "label": "Agricultura Sustentável",
+                "description": "Precisão agrícola com drones e sensores IoT",
+                "color": "#8BC34A"
             },
             {
-                "id": "ocean",
-                "label": "Ocean Health",
-                "description": "Coral reef monitoring, plastic pollution tracking, fish stock prediction",
-                "color": "#74b9ff"
+                "id": 9,
+                "label": "Redução de Poluição",
+                "description": "Monitorar qualidade do ar e água, controlar emissões",
+                "color": "#F44336"
             },
             {
-                "id": "outcomes",
-                "label": "Positive Environmental Outcomes",
-                "description": "Reduced emissions, protected ecosystems, sustainable resource use",
-                "color": "#00b894"
-            },
-            {
-                "id": "benefits",
-                "label": "Human Benefits",
-                "description": "Clean air/water, food security, climate stability, economic growth",
-                "color": "#fdcb6e"
+                "id": 10,
+                "label": "Proteção do Meio Ambiente",
+                "description": "Planeta mais sustentável e saudável para gerações futuras",
+                "color": "#4CAF50"
             }
         ],
         "edges": [
-            {"source": "start", "target": "ai_applications"},
-            {"source": "ai_applications", "target": "monitoring"},
-            {"source": "ai_applications", "target": "conservation"},
-            {"source": "ai_applications", "target": "agriculture"},
-            {"source": "ai_applications", "target": "energy"},
-            {"source": "ai_applications", "target": "pollution"},
-            {"source": "ai_applications", "target": "forest"},
-            {"source": "ai_applications", "target": "ocean"},
-            {"source": "monitoring", "target": "outcomes"},
-            {"source": "conservation", "target": "outcomes"},
-            {"source": "agriculture", "target": "outcomes"},
-            {"source": "energy", "target": "outcomes"},
-            {"source": "pollution", "target": "outcomes"},
-            {"source": "forest", "target": "outcomes"},
-            {"source": "ocean", "target": "outcomes"},
-            {"source": "outcomes", "target": "benefits"}
+            {"from": 1, "to": 2},
+            {"from": 2, "to": 3},
+            {"from": 2, "to": 4},
+            {"from": 2, "to": 5},
+            {"from": 1, "to": 6},
+            {"from": 1, "to": 7},
+            {"from": 1, "to": 8},
+            {"from": 1, "to": 9},
+            {"from": 3, "to": 10},
+            {"from": 4, "to": 10},
+            {"from": 5, "to": 10},
+            {"from": 6, "to": 10},
+            {"from": 7, "to": 10},
+            {"from": 8, "to": 10},
+            {"from": 9, "to": 10}
         ]
     }
     return json.dumps(flowchart_data)
